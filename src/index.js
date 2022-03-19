@@ -1,7 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from "./App";
 
+ReactDOM.render(<App/>,document.getElementById('root'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const message = React.createElement('p',{},'I am Learning React');
 // const header = React.createElement('h2',{},"React Basics");
 
@@ -26,7 +69,8 @@ const colorObject = {
 const firstJSX = (
   <>
     <h1 className="mystyle">Hello {name}</h1>
+    <h1 className="mystyle">Hello {name}</h1>
+    <h1 className="mystyle">Hello {name}</h1>
   </>
 )
-
-ReactDOM.render(firstJSX,document.getElementById('root'));
+*/
