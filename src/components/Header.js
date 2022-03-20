@@ -2,10 +2,28 @@ import React from 'react';
 
 const Header = (props) => {
     // console.log(props);
+    let puppy = {
+        breed: "Lab",
+        age: 2,
+        color: "green"
+    }
+
+    // Object Destructuring
+    /*
+    let breed = puppy.breed;
+    let age = puppy.age;
+    let color = puppy.color;
+    */
+
+    let {breed,age,color} = puppy;
+    console.log(breed,age,color);
+
+    let {name,city,children} = props;
+
     return (
         <>
-        <p>Hello {props.name}, {props.city}, {props.pincode}</p>
-        {props.children}
+        <p>Hello {name}, {city}, {props.pincode}</p>
+        {children}
         </>
     )
 }

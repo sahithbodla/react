@@ -40,12 +40,14 @@ const Home = (props) => {
 
     */
 
+    /*
     // reduce
     let arr = [1,2,3];
 
     let sum = arr.reduce((accumulator,value) => accumulator+value)
 
     console.log(sum);
+    */
 
 
     return (

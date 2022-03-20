@@ -1,4 +1,5 @@
 import './App.css';
+import About from './components/About';
 import Home from './components/Home';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
     <div className="App">
       <h1>I am inside App component</h1>
       <p>We are testing the working of React Components</p>
+      <About phNum = '89898912' email="bla@bla.com" />
       <Home name="Sahith" pincode="507101" />
       <Home name="Toffi" city="Hyderabad" />
       <Home city="Bangalore" pincode="507103" />
