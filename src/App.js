@@ -1,8 +1,24 @@
 import './App.css';
 import About from './components/About';
 import Home from './components/Home';
+import React,{useState} from 'react';
 
 function App() {
+
+  console.log(useState("Jack"));
+
+  const [phoneNumber,setPhoneNumber] = useState([]);
+  const [email,setEmail] = useState('bla@bla.com');
+
+  let arr = ["Sahith",12345];
+
+  /*
+  // let name = arr[0];
+  // let phNum = arr[1];
+
+  // array destructuring
+  let [name,phNum] = arr;
+  */
 
   /*
   //Rest Operator
@@ -34,11 +50,16 @@ function App() {
   }
   */
 
+  function changeState(){
+    setPhoneNumber("123");
+  }
+
   return (
     <div className="App">
       <h1>I am inside App component</h1>
       <p>We are testing the working of React Components</p>
-      <About phNum = '89898912' email="bla@bla.com" />
+      <About phNum = {phoneNumber} email={email} />
+      <button onClick={changeState}>Wanna see phonenumber?</button>
       <Home name="Sahith" pincode="507101" />
       <Home name="Toffi" city="Hyderabad" />
       <Home city="Bangalore" pincode="507103" />
