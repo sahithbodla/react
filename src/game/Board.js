@@ -7,6 +7,7 @@ class Board extends React.Component {
     super(props);
     this.state = {
       squares: Array(9).fill(null),
+      xIsNext:true
     }
   }
 
@@ -14,8 +15,31 @@ class Board extends React.Component {
   //   'X',null,null,
   //   null,'X',null]
 
+  handleBoardClick(i) {
+    const squaresCopy = this.state.squares.slice();
+    // squaresCopy[i] = 'X';
+    let playerValue = null;
+
+    if(this.state.xIsNext === true){
+      playerValue='X'
+    } else {
+      playerValue='Y'
+    }
+    
+    squaresCopy[i] = playerValue;
+    // squaresCopy[i] = this.state.xIsNext ? 'X' : 'Y';
+    this.setState({
+      squares:squaresCopy,
+      xIsNext: !this.state.xIsNext
+    })
+  }
+
   renderSquare(i) {
-    return <Square value={i} />;
+    return (
+    <Square 
+    value = {this.state.squares[i]}
+    handleClick = {() => this.handleBoardClick(i)}
+    />);
   }
 
   render() {
