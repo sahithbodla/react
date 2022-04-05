@@ -18,13 +18,14 @@ const UserGreeting = () => {
 
 function App() {
 
-  const [isUserLoggedIn,setIsUserLoggedIn] = useState(true);
-
-  if(isUserLoggedIn === false) {
-    return <GuestGreeting />
-  } else if(isUserLoggedIn === true){
-    return <UserGreeting />
-  }
+  let error='ERROR';
+  return (
+    <>
+      {error && <h1>{error}</h1>}
+    </>
+  )
+  
+  
 }
 
 export default App;
