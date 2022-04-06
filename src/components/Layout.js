@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Outlet,Link } from 'react-router-dom'
 
-const Header = () => {
+const Layout = () => {
   return (
-      <>
-        <h1>This is Header Component</h1>
+    <>
         <ul>
             <li>
                 <Link to="/blogs">Blogs Component</Link>
@@ -23,9 +22,10 @@ const Header = () => {
               <Link to="/dishes" >Dishes Component</Link>
             </li>
         </ul> 
-      </>
 
+        <Outlet/>
+    </>
   )
 }
 
-export default Header
+export default Layout
